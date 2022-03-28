@@ -1,0 +1,109 @@
+/** Base **/
+* {
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(4, 0, 29); 
+  height: 100%;
+  width: 100%;
+}
+
+header, footer, 
+#UA-flag, #flags,
+.blue-line, .yellow-line {
+  width: 100%;
+}
+
+.full-content {
+  background: #fff;
+  margin: auto;
+  width: 60%;
+}
+
+
+/** Text **/
+@font-face {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  src: url(/content/framd.ttf);
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url(/content/GOTHIC.TTF);
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 35px;
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+a {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+
+
+/** Blocks **/
+article, address {
+  padding: 40px;
+}
+
+article {
+  min-height: 470px;
+}
+
+address {
+  display: flex;
+  flex-direction: row;
+}
+
+
+/** Address **/
+.currency {
+  font-family: 'Century Gothic';
+  font-weight: 600;
+  padding-right: 30px;
+}
+
+#btc, 
+#btc-link {
+  display: block;
+  color: #004ea8;
+}
+
+
+#usdt, 
+#usdt-link {
+  color: #a9a000;
+}
+
+
+/** Photos **/
+#stop-war {
+  margin: 0 65px 40px 0;
+  width: 500px;
+  float: left;
+}
+
+#UA-flag, #flags{
+  display: block;
+}
+
+
+/** Lines **/
+.blue-line, .yellow-line {
+  height: 18px;
+}
+.blue-line {
+  background: #0078FF;
+}
+.yellow-line {
+  background: #FFE800;
+}
