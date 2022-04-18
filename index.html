@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Save Ukraine!</title>
+    <meta name="description" content="Help in the fight against Z-fascism">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Help in the fight against Z-fascism-</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="content/ua-coat.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <div class="full-content">
         <header>
-          <img id="UA-flag" src="/content/header.png" alt="Ukrainian flag with war photos">
+          <img id="UA-flag" src="content/header.png" alt="Ukrainian flag with war photos">
         </header>
 
         <main>
           <div class="blue-line"></div>
           <article>
-            <img id="stop-war" src="/content/Stop_war.png" alt="Stop war!">
+            <img id="stop-war" src="content/Stop_war.png" alt="Stop war!">
             <p>This is an address to the all world citizens!</p>
             <p>The Russian invaders at Ukraine act and behave like typical Fascists!</p>
             <p>They destroy our cities and kill our children and women!</p>
@@ -31,19 +36,19 @@
               <p id="usdt">USDT:</p>
             </div>
             <div class="links">
-              <a id="btc-link" href="https://link.trustwallet.com/send?address=bc1q6g65846ttz5ulxqkyt9wh2fn4x86g0myh67rfu&asset=c0" target="_blank">
-                bc1q6g65846ttz5ulxqkyt9wh2fn4x86g0myh67rfu
-              </a>
-              <a id="usdt-link" href="https://link.trustwallet.com/send?address=bc1q6g65846ttz5ulxqkyt9wh2fn4x86g0myh67rfu&asset=c0" target="_blank">
-                0x34A3b1e6843F81040Eb74e3C11d19aC86288f9dB
-              </a>
+              <p id="btc-link" onclick="copyWallet(this.id)">bc1q6g65846ttz5ulxqkyt9wh2fn4x86g0myh67rfu</p>
+              <p id="usdt-link" onclick="copyWallet(this.id)">0x34A3b1e6843F81040Eb74e3C11d19aC86288f9dB</p>
             </div>
           </address>
         </main>
         
         <footer>
-          <img id="flags" src="/content/flags.png" alt="Global flags">
+          <img id="flags" src="content/flags.png" alt="Global flags">
         </footer>
+      </div>
+
+      <div class="notification hide">
+        <span>Wallet copied!</span>
       </div>
   </body>
 </html>

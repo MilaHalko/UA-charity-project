@@ -1,14 +1,38 @@
+/** Text **/
+@font-face {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  src: url(content/framd.ttf);
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url(content/GOTHIC.TTF);
+}
+
+
 /** Base **/
 * {
+  --black: #111;
+  --blue: #0078FF;
+  --grey-blue: #004ea8;
+  --dark-blue: #070031;
+  --white-blue: #a9d1ff;
+  --white: #fff;
+  --yellow: #FFE800;
+  --grey-yellow: #a9a000;
+  --dark-yellow: #2b2800;
   font-style: normal;
   margin: 0;
   padding: 0;
 }
 
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
-  background: rgb(7, 0, 49); 
-  height: 100%;
-  width: 100%;
+  background: var(--dark-blue); 
 }
 
 header, footer, 
@@ -18,44 +42,17 @@ header, footer,
 }
 
 .full-content {
-  background: #fff;
+  background: var(--white);
   margin: auto;
-  width: 60%;
-}
-
-
-/** Text **/
-@font-face {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  src: url(/content/framd.ttf);
-}
-
-@font-face {
-  font-family: 'Century Gothic';
-  src: url(/content/GOTHIC.TTF);
-}
-
-p, 
-a {
-  line-height: 35px;
-  margin-bottom: 25px;
+  width: 1000px;
 }
 
 p {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 35px;
+  line-height: 35px;
   letter-spacing: 2px;
-}
-
-a {
-  font-size: 30px;
-}
-
-a,
-.currency {
-  font-family: 'Century Gothic';
-  font-weight: 600;
-  padding-right: 30px;
+  margin-bottom: 25px;
 }
 
 
@@ -68,23 +65,36 @@ article {
   min-height: 470px;
 }
 
+
+/** Address **/
 address {
   display: flex;
   flex-direction: row;
+  font-family: 'Century Gothic';
+  font-weight: 600;
 }
 
+.currency {
+  padding-right: 30px;
+}
 
-/** Address **/
+#btc-link, 
+#usdt-link {
+  font-size: 30px;
+  text-decoration: underline;
+  cursor: pointer;
+  word-wrap: break-word;
+}
+
 #btc, 
 #btc-link {
   display: block;
-  color: #004ea8;
+  color: var(--grey-blue);
 }
-
 
 #usdt, 
 #usdt-link {
-  color: #a9a000;
+  color: var(--grey-yellow);
 }
 
 
@@ -105,8 +115,68 @@ address {
   height: 18px;
 }
 .blue-line {
-  background: #0078FF;
+  background: var(--blue);
 }
 .yellow-line {
-  background: #FFE800;
+  background: var(--yellow);
+}
+
+
+/** Notification **/
+.notification span {
+  color: var(--white);
+  font-family: 'Century Gothic';
+  font-size: 25px;
+  margin: auto;
+}
+
+.notification {
+  background: var(--grey-blue);
+  border: 5px solid var(--blue);
+  border-right: none;
+  border-radius: 15px 0 0 15px;
+  display: flex;
+  height: 100px;
+  width: 300px;
+  position: fixed;
+  right: 0px;
+  top: 10px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.showNotification {
+  opacity: 1;
+}
+
+.show {
+  animation: show_slide 1s ease forwards;
+}
+
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%);
+  }
+}
+
+.hide {
+  animation: hide_slide 1s ease forwards;
+}
+
+@keyframes hide_slide {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+/** Media for Phones **/
+@media (max-width: 600px) {
+  .full-content {
+    width: 100%;
+  }
+
+  .notification span {
+    font-size: 50px;
+  }
 }
